@@ -1,0 +1,56 @@
+@keyframes body-entrance {
+	0% {
+		background-color: rgb(0, 0, 0);
+	}
+	100% {
+		background-color: rgb(12, 16, 20);
+	}
+}
+body.body-main {
+	background-color: black;
+	animation: ease-in forwards 1s body-entrance;
+}
+
+@keyframes white-card-entrance {
+	0% {
+		opacity: 0;
+		margin-top: 0;
+	}
+	50% {
+		margin-top: 3rem;
+	}
+	100% {
+		opacity: 1;
+		margin-top: 3rem;
+	}
+}
+
+div.animate-fade-low {
+	animation: forwards 2s white-card-entrance;
+}
+
+@keyframes green-overlay-expand {
+	0% {
+		box-shadow: 0 0 rgb(47, 98, 153);
+		opacity: 0;
+	}
+	100% {
+		box-shadow: -15px 15px rgb(47, 98, 153);
+		opacity: 1;
+	}
+}
+
+div.green-overlay {
+	animation: forwards 1.5s green-overlay-expand;
+}
+
+.card-accent {
+	background-color: rgb(17, 23, 29);
+}
+.accent-txt {
+	color: rgb(73, 135, 202);
+}
+
+::selection {
+	background-color: rgb(37, 86, 138);
+}
