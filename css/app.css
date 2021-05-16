@@ -51,6 +51,24 @@ div.green-overlay {
 	color: rgb(73, 135, 202);
 }
 
+@keyframes animate-padding-increase {
+	0% {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	100% {
+		padding-right: 15px;
+		padding-left: 2px;
+	}
+}
+.accent-txt-bg {
+	background-color: rgba(45, 78, 114, 0.4);
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+	animation-name: animate-padding-increase;
+	animation-delay: 0.25s;
+}
+
 ::selection {
 	background-color: rgb(37, 86, 138);
 }

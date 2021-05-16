@@ -1,0 +1,6 @@
+# stuff  requried by vscode extension
+node_modules
+tailwind.config.js
+package.json
+package-lock.json
+tsconfig.json
