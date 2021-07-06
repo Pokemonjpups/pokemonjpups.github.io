@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Login | Avasquare Administration</title>
+
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link rel="shortcut icon" href="https://www.avasquare.com/img/icon.png">
+<meta name="csrf-token" content="XDkFoeaFspRpomU5pZ1Stg87FSTCCnToVzcpSTbp">
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+        body {
+            background: #eee;
+            color: #333;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        b, strong {
+            font-weight: 600;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .navbar {
+            background: #000;
+        }
+
+        .navbar .navbar-brand {
+            margin-top: -5px;
+        }
+
+        .navbar .nav-link {
+            color: #fff;
+        }
+
+        .navbar .headshot a {
+            text-decoration: none;
+        }
+
+        .navbar .headshot .dropdown-toggle {
+            margin-right: none!important;
+        }
+
+        .navbar .headshot .dropdown-toggle::after {
+            border: none!important;
+            margin: 0!important;
+        }
+
+        .card {
+            margin-bottom: 16px;
+        }
+
+        .card, .breadcrumb {
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: 0;
+        }
+
+        @media  only screen and (min-width: 768px) {
+            .show-sm-only {
+                display: none !important
+            }
+
+            .mb-sm-only {
+                margin-bottom: 0 !important
+            }
+
+            .nav-tabs.card-header-nav-tabs {
+                margin-bottom: -5px
+            }
+        }
+
+        @media  only screen and (max-width: 768px) {
+            .hide-sm {
+                display: none !important
+            }
+
+            .full-width-sm {
+                width: 100% !important
+            }
+
+            .text-center-sm {
+                text-align: center !important
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="margin-top:50px;">
+<div class="row justify-content-center">
+<div class="col-md-5">
+<h1 class="text-center" style="font-weight:600;">Avasquare</h1>
+<h3 class="text-center" style="font-weight:600;margin-top:-10px;margin-bottom:15px;">ADMIN</h3>
+<div class="card">
+<div class="card-body">
+<form action="https://www.avasquare.com/admin-panel/login" method="POST">
+<input type="hidden" name="_token" value="XDkFoeaFspRpomU5pZ1Stg87FSTCCnToVzcpSTbp">
+<input type="hidden" name="return_location" value="https://example.com">
+<label for="username" style="font-weight:600;margin-bottom:5px;">Username</label>
+<input class="form-control mb-2" type="text" name="username" placeholder="Username" required>
+<label for="username" style="font-weight:600;margin-bottom:5px;">Password</label>
+<input class="form-control mb-3" type="password" name="password" placeholder="Password" required>
+<button class="btn btn-block btn-success" type="submit">Login</button>
+</form>
+ </div>
+</div>
+<a href="https://www.avasquare.com">Return to Avasquare</a>
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+        function ping() {
+            $.post('/api/auth/ping', {
+                _token: $('meta[name="csrf-token"]').attr('content')
+            }).done((data) => console.log('Sent connection ping.'));
+        }
+
+        setInterval(ping(), 30000);
+    </script>
+</body>
+</html>
